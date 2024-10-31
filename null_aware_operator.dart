@@ -1,13 +1,18 @@
 //Null Aware Operator
 // (?.) , (??) , (??=)
 
-class Num{
-  int num=10;
+class Num {
+  int num = 10;
 }
-main(){
-  var n=Num();
+
+void main() {
+  var n = Num();
   int number;
 
-  number=n.num;
+  //?.
+  number = n.num ?? 0;
   print('$number');
+  int? k;
+  print(k ??= 100);
+  // print(k);
 }
