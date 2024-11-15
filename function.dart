@@ -22,6 +22,7 @@ void main() {
   print(sum3(1, num2: 12));
   print(sum4(1));
   print(sum5(1));
+  print(sum6(4, 6));
 }
 
 dynamic cube(var val) => val * val * val;
@@ -47,4 +48,6 @@ dynamic sum1({var num1, var num2}) => num1 + num2;
 dynamic sum2(var num1, {var num2}) => num1 + num2;
 dynamic sum3(var num1, {var num2}) => num1 + (num2 ?? 0);
 dynamic sum4(var num1, {var num2 = 10}) => num1 + num2;
-dynamic sum5(var num1,[var num2]) => num1 + (num2 ?? 0);
+dynamic sum5(var num1, [var num2]) => num1 + (num2 ?? 0);
+dynamic sum6(var num1, var num2) =>
+    (num1 - num2) - (num2 - num1) * (num1 * num2);
